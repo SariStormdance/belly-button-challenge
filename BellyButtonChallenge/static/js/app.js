@@ -32,7 +32,7 @@ function optionChanged (chooseOption) {
 let trace1 = {
     x: Top10.map(object => object.sample_values),
     y: Top10.map(object => object.otu_ids),
-    // text: Top10.map(object => object.otu_labels),
+    text: Top10.map(object => object.otu_labels),
     name: "OTU",
     type: "bar",
     orientation: "h"
@@ -53,6 +53,6 @@ let layout = {
   };
   
   // Render the plot to the div tag with id "plot"
-  Plotly.newPlot("plot", traceData, layout);
+  Plotly.newPlot("plot", layout, traceData);
     });
 };
